@@ -5,57 +5,29 @@ import Navabar from "@/components/global/navbar";
 import { MaskContainer } from "@/components/ui/svg-mask-effect";
 import { FlipWords } from "@/components/ui/flip-words";
 import Badge from "@/components/ui/badge";
-
+import Projects from "@/components/ui/projects";
 import { Timeline } from "@/components/ui/timeline";
 import ExpandabelCard from "@/components/ui/expandable-cards";
 import TechStack from "@/components/ui/tech-stack";
 import { TextHoverEffect } from "@/components/ui/text-hover-effect";
 import { Meteors } from "@/components/ui/meteors";
+import TopBar from "@/components/global/topbar";
 export default function Home() {
   return (
     <main>
-      {/* <div className="fixed top-0   z-10 justify-center">
-        <Header />
-      </div> */}
-      <div className="fixed bottom-0 left-1/2 transform -translate-x-1/2  z-10 justify-center">
-        <Navabar />
-      </div>
-      {/* <div className=" flex h-full w-full text-neutral-500 dark:text-neutral-300 justify-center ">
-        shivam
-      </div> */}
-
+      <TopBar />
       <div className="flex justify-center gap-x-8 items-center h-screen bg-black ">
-        <div className="flex flex-col max-auto justify-start items-center md:items-start">
-          <div className="text-5xl  font-normal text-neutral-600 dark:text-neutral-400 text-center md:text-start">
-            Your
-            <FlipWords words={words} /> <br />
-            developer here👋
-          </div>
-          <p className="text-sm md:text-base font-normal  text-neutral-400 mt-4 max-w-lg text-center md:text-start ">
-            Namaste! Whether you’re my future boss, a coding buddy, or just here
-            to fool around with the card on your right 👉 , I’m pumped to show
-            off experience, my work (and some questionable jokes)!
-          </p>
-          <button
-            className=" mt-8 overflow-hidden w-1/3 relative inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 group"
-            onClick={() => {
-              const link = document.createElement("a");
-              link.href = "/resume.pdf";
-              link.download = "Shivam_Anand_Resume.pdf";
-              link.click();
-            }}
-          >
-            <span className="group-hover:translate-x-40 text-center transition duration-500">
-              View Resume
-            </span>
-            <div className="-translate-x-40 group-hover:translate-x-0 flex items-center justify-center absolute inset-0 transition duration-500 text-white z-20">
-              📃
-            </div>
-          </button>
-        </div>
-
-        <div className=" hidden md:flex items-center justify-center w-1/2 h-screen ">
+        <div className=" hidden md:flex items-center justify-center w-1/3 h-screen ">
           <Badge />
+        </div>
+        <div className="flex flex-col max-auto justify-end items-center md:items-start">
+          <div className="text-[clamp(2.5rem,10vw,7rem)] leading-none font-semibold w-full  text-neutral-800 dark:text-neutral-400 text-center md:text-end">
+            Developer&nbsp;
+            <br />
+            who's&nbsp;
+            <br />
+            <FlipWords words={words} />
+          </div>
         </div>
       </div>
       <Meteors number={20} />
@@ -64,7 +36,7 @@ export default function Home() {
       <p className=" text-center mb-8 text-4xl sm:text-7xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-8">
         Projects
       </p>
-      <ExpandabelCard />
+      <Projects />
 
       <div className="mt-14">
         <MaskContainer
@@ -77,7 +49,7 @@ export default function Home() {
           className="h-[20rem] border rounded-md"
         >
           If it involves code, I've probably
-          <span className="text-red-500">broken it once, </span> then learned
+          <span className="text-red-500"> broken it once, </span> then learned
           how to <span className="text-red-500">fix it twice!</span>.
         </MaskContainer>
       </div>
@@ -94,9 +66,66 @@ export default function Home() {
 
 //CONTENT NOT CODE!!!!!!!!!!
 
-const words = ["friendly", "creative", "versatile", "modern"];
+const words = ["creative", "versatile", "builder", "innovator"];
 
 const data = [
+  {
+    title: "Bytesview Analytics",
+    content: (
+      <div>
+        <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-4">
+          Developed robust APIs and customized the Django Admin panel with
+          dynamic dashboards, custom filters, and inline models—streamlining
+          admin operations and enhancing team productivity for the CryptoReach
+          project.
+        </p>
+        <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-4">
+          Leveraged advanced web scraping techniques to parse and structure
+          large-scale news data from XML feeds for NewsData.io, enabling
+          efficient analysis and retrieval of financial news content.
+        </p>
+        <div className="grid grid-cols-2 gap-4">
+          {" "}
+          <Image
+            src="https://i0.wp.com/www.bytesview.com/blog/wp-content/uploads/2023/02/7f786ce0a9a4caa7283a3bbaedb0890b.jpg?fit=1584%2C891&ssl=1"
+            alt="bento template"
+            width={500}
+            height={500}
+            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+          />
+        </div>
+      </div>
+    ),
+  },
+  {
+    title: "Ministry Of Housing And Urban Affairs",
+    content: (
+      <div>
+        <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
+          Around April of '23 I dugged into ground conditions (literally) and
+          built a website that checked all the boxes for government
+          guidelines—think accessibility features for blind and deaf users, plus
+          color blindness support, all crafted with the basics of HTML5, CSS,
+          and a pinch of JavaScript.
+        </p>
+        <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
+          Sketched out the design in Figma, brought it to life ,handled all the
+          backend magic with Firebase as BaaS. Finally, launched the whole
+          prototype on DigitalOcean, making sure it was as smooth and
+          user-friendly as a government site can get!
+        </p>
+        <div className="grid grid-cols-2 gap-4">
+          <Image
+            src="https://drive.google.com/uc?export=view&id=14QaWqHHzQXoNNTyspyLXK5PYIxlfK_g9"
+            alt="bento template"
+            width={500}
+            height={500}
+            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+          />
+        </div>
+      </div>
+    ),
+  },
   {
     title: "Google Student Developer Club",
     content: (
@@ -140,35 +169,6 @@ const data = [
     ),
   },
   {
-    title: "Ministry Of Housing And Urban Affairs",
-    content: (
-      <div>
-        <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-          Around April of '23 I dugged into ground conditions (literally) and
-          built a website that checked all the boxes for government
-          guidelines—think accessibility features for blind and deaf users, plus
-          color blindness support, all crafted with the basics of HTML5, CSS,
-          and a pinch of JavaScript.
-        </p>
-        <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-          Sketched out the design in Figma, brought it to life ,handled all the
-          backend magic with Firebase as BaaS. Finally, launched the whole
-          prototype on DigitalOcean, making sure it was as smooth and
-          user-friendly as a government site can get!
-        </p>
-        <div className="grid grid-cols-2 gap-4">
-          <Image
-            src="https://drive.google.com/uc?export=view&id=14QaWqHHzQXoNNTyspyLXK5PYIxlfK_g9"
-            alt="bento template"
-            width={500}
-            height={500}
-            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-          />
-        </div>
-      </div>
-    ),
-  },
-  {
     title: "Zuraverse Private Limited",
     content: (
       <div>
@@ -203,8 +203,9 @@ const data = [
       </div>
     ),
   },
+
   {
-    title: "Delhi Technological University",
+    title: "Delhi Technological University Inhouse Internship",
     content: (
       <div>
         <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-4">
