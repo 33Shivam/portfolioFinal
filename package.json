@@ -22,6 +22,7 @@
     "leva": "^0.9.35",
     "lucide-react": "^0.451.0",
     "meshline": "^3.3.1",
+    "motion": "^12.23.12",
     "next": "14.2.14",
     "next-themes": "^0.3.0",
     "react": "^18",
